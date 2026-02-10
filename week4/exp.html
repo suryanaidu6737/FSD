@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Selector Forms</title>
+
+<style>
+/* i. Simple Selectors */
+p { color: blue; }                 /* element selector */
+#idBox { color: green; }             /* id selector */
+.clsBox { color: purple; }          /* class selector */
+h3, h4 { color: red; }          /* group selector */
+* { font-family: Arial; }          /* universal selector */
+
+/* ii. Combinator Selectors */
+div p { background: lightgray; }   /* descendant */
+div > span { color: brown; }       /* child */
+h3 + p { font-style: italic; }     /* adjacent sibling */
+h4 ~ p { text-decoration: underline; } /* general sibling */
+
+/* iii. Pseudo-class */
+a:hover { color: orange; }
+
+/* iv. Pseudo-element */
+p::first-letter { font-size: 20px; }
+
+/* v. Attribute Selector */
+input[type="text"] { border: 2px solid black; }
+</style>
+
+</head>
+<body>
+
+<p>Element selector</p>
+<p id="idBox">ID selector</p>
+<p class="clsBox">Class selector</p>
+
+<h3>Group selector</h3>
+<h4>Group selector</h4>
+
+<div>
+    <p>Descendant selector</p>
+    <span>Child selector</span>
+</div>
+
+<h3>Heading</h3>
+<p>Adjacent sibling</p>
+
+<h4>Heading</h4>
+<p>General sibling</p>
+<p>General sibling</p>
+
+<a href="#">Pseudo-class selector</a><br><br>
+
+<input type="text" placeholder="Attribute selector">
+
+</body>
+</html>
