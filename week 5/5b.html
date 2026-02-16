@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>  
+<head>
+<title>Fixed Tilted Background Image Without Pseudo-Element</title>
+<style>
+    body {
+        min-height: 200vh; /* Makes page scrollable */
+    }
+
+    /* The fixed, tilted background image */
+    .bg-image {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        top:50%;
+        left:50%;
+        background-image: url("sample.png"); /* Sample image */
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform:rotate(20deg); /* Tilt */
+        z-index: -1;          /* Behind content */
+        opacity: 0.7;          /* Optional styling */
+    }
+
+    .content {
+        padding: 40px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<!-- Actual div for background image -->
+<div class="bg-image"></div>
+
+<div class="content">
+    <h1>Scrolling Page</h1>
+    <p>Scroll up and down — the tilted image stays fixed halfway down the page.</p>
+    <p style="margin-top:1000px;">More content here to enable scrolling.</p>
+</div>
+
+</body>
+</html>
