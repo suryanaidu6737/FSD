@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Example</title>
+
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 300px;
+            
+            /* Content area background */
+            background-color: lightblue;
+
+            /* Padding - space inside the border */
+            padding: 20px;
+
+            /* Border - surrounds padding and content */
+            border: 5px solid darkblue;
+
+            /* Margin - space outside the border */
+            margin: 40px;
+
+            text-align: center;
+        }
+
+        .label {
+            font-weight: bold;
+            color: darkred;
+            font-family: 'Times New Roman';
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Box Model Demonstration</h2>
+
+    <div class="box">
+        <p><span class="label">Content:</span> This is the actual text inside the box.</p>
+        <p><span class="label">Padding:</span> Space between content and border (20px).</p>
+        <p><span class="label">Border:</span> 5px solid dark blue border.</p>
+        <p><span class="label">Margin:</span> 40px space outside the border.</p>
+    </div>
+
+</body>
+</html>
